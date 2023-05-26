@@ -25,26 +25,25 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        if ($request->isMethod('post')) {
-            $data = $request->all();
-            $usersCount = User::where('email', $data['email'])->count();
+//        dd($request);
+            $usersCount = User::where('email', $request->email)->count();
             if ($usersCount > 0) {
                 return redirect()->back()->with('error_message', 'Email Already Exist');
 
             } else {
                 $user = new User;
-                $user->name = $data['name'];
-                $user->email = $data['email'];
-                $user->password = bcrypt($data['password']);
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = bcrypt($request->password);
                 $user->save();
-                if (Auth::attempt(['email' => $data['email'], 'password' => $data['password']])) {
+                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 //                    Session::put('frontSession',$data['email']);
                     return redirect()->route('job.browse');
 
                 }
             }
 
-        }
+
         return view('auth.register');
     }
 
@@ -143,25 +142,28 @@ class UserController extends Controller
         return view('Student.jobShow', compact('Jobs'));
 
     }
-
+//    function uploadImage($folder,$image){
+//        $image->store('/', $folder);
+//        $filename = $image->hashName();
+//        return  $filename;
+//    }
+    function uploadImage($folder,$image){
+        $image->store('/', $folder);
+        $filename = $image->hashName();
+        return  $filename;
+    }
     public function storeRequest(Request $request)
     {
-//            dd($request);
-        $path = $request->file('cv')->store('/imagesite', ['disk' => 'uploads']);
-
-//        try {
+        $file = $request->file('cv');
+      $filename =  $this->uploadImage('imagesite', $file);
         Request_job::create([
             'name' => $request->name,
             'phone' => $request->phone,
-            'cv' => $path
+            'cv' => $filename
         ]);
-
 
         return redirect()->back()->with(['success' => 'تم الحفظ بنجاح']);
 
-//        } catch (\Exception $ex) {
-
-//        }
 
 
     }

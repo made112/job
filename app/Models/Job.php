@@ -8,7 +8,7 @@ class Job extends Model
 {
     protected $guarded = [];
 
-    protected  $table = 'job_offer';
+    protected  $table = 'job';
     public $timestamps = false ;
 
     public  function JobType(){

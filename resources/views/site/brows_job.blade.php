@@ -108,7 +108,7 @@
 
                                             <!-- Modal -->
 
-                                        </tr>
+
                                         @endforeach
                                         </tbody>
 
@@ -193,7 +193,7 @@
                             </div>
                             <div class="tab-pane" id="tab3">
                                 <div id="candidate">
-@foreach($user as $item)
+                                @foreach($user as $item)
                                     <div class="model-box">
                                         <div class="detail">
                                             <div class="image">
