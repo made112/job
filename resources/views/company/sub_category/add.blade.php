@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>JOBS</h1>
+                        <h1>Sub_Category</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Edit JOBS</li>
+                            <li class="breadcrumb-item active">Sub_Category</li>
                         </ol>
                     </div>
                 </div>
@@ -26,11 +26,11 @@
                 @include('admin.includes.alerts.errors')
 
                 <form method="post" name="sectionForm" id="sectionForm"
-                      action="{{route('admin.company.update',$Jobs->id)}}">
+                      action="{{route('sub_category.post')}}">
                     @csrf
                     <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title">Edit</h3>
+                            <h3 class="card-title">Add</h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                                 <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -41,34 +41,28 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="type">Job Name</label>
-                                        <input name="name" type="text" class="form-control" value= {{$Jobs->name}} id="name" placeholder="">
+                                        <label for="type">SUB_Category Name</label>
+                                        <input name="name"  type="text" class="form-control" id="name" placeholder="Enter Sub_Category">
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="type">Job description</label>
-                                        <input name="description" type="text" class="form-control" value= {{$Jobs->description}} id="description" placeholder="">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="switch">
-                                            <input type="checkbox" name="active" value="1"@if($Jobs -> active  == 1 ) checked @endif>
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="projectinput2"> choose category </label>
+                                <select name="category_id" class=" form-control">
+                                    <optgroup>
+                                        @isset($category)
+                                            @foreach($category as $cat)
+                                                <option value="{{$cat -> id }}">{{$cat -> name}}</option>
+                                            @endforeach
+                                        @endisset
+                                    </optgroup>
+                                </select>
+                                @error('category_id')
+                                <span class="text-danger"> {{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="card-footer">

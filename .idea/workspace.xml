@@ -2,44 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6719f41c-24b8-4028-ab76-aefc563ec3b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JobRing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JobRing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CompanyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Skills.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/includes/company_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/category/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/category/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/category/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/company/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/company/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/company/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/company_dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/company_login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/admin_footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/admin_header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/admin_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/alerts/errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/alerts/success.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/includes/company_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/job_request/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/sub_category/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/sub_category/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/company/sub_category/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/company_layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/site/brows_job_filter.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/JobController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Request_job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Request_job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/3Jvn24jBMu5dVkQy2KUzEwdfToPjGLxBO1t8DWoz.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/3NmZPRtJZux8IgAbdXnMZmUk3No6qAHBFUnVfanc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/64RZBSvaFGtgKcNIKgcbp55vDKKc8gLnNIXehWI4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/6oBFfGt7r2DzDvFo4uTXBdqL1dHf0ByXAP10c22E.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/85dEjPhNCDyGMfKqzfraBSdnWj23VWonmElocXg3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/9JACF8GZVI9WLw0ZO9MRpT2QVoNTK2WgV6YztLED.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/DzeJumHjeFEfsumOUhPX4ZY7XiSEcI0mvDEnuaVM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/I89KnZcCB9630L6gwJMQb77dep0Z3ukbioNnEbMP.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/JR3IRtoXFIOAmmWfC30CiCqWiWITsFZOSX1UKwIA.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/OTqhcIp0FOiHPuzxiyMQGMBFWNJfy2dWbn5K8Xe0.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/OfsGJaryQ2VoaZcSWYAGf2xMjiC6GHT6OBQR5pNK.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/RWbkw04ZUjhTxMLqGQ6KtTvP8aOoVU1N45eMsxze.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/SC3eNXcucovR1hgw3wsV4E7uWsosyFtI1LfhGGTE.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/TTwVYeZgefy1s1KXVq0XKEAWtKXFdgy3Kd5Uumaj.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/company.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/fskjH5hu6opBKIlNauGZEBYq7AoRGhj89euXSIGx.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/hpvBfffTj5SjzLmQb1zT2o9kTM24BCIwz519Dx1B.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/mtKhtm1ZcXENl2gJKvSQW6XpGqYO1hH0CR6Q0dwK.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/qucX4n9pnBvNt40AvZ9S0eFqUvmu5jbPXRYkF9wl.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/r0zEC5oR71F0odGcf3XdpuRlz27qS7CDF3i9aa2I.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/ro1Ix8OUOAN2V6q2NfTox99jYrA9IZ1MnxnRT9Mr.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/user.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/yWnYoCank9g3aDHYlygxUHjczdLIXhRgFwetoFfI.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/imagesite/ycWhpDNhC1ae52YHZ9laGfDy9EN669XNfnNbBqj2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobring.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jobring.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/esm/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/esm/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/popper-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/popper/umd/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/popper/umd/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin_dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/admin_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/job/add_Job.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/job/add_Job.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/job/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/job/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/job/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/job/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/job_request/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/job_request/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/brows_job.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/brows_job.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/company-profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/company-profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/contact-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/front_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/front_dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,18 +203,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/job",
+    "last_opened_file_path": "C:/laragon/www/job/app/Models",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\jobRing_end\resources\views\site" />
-      <recent name="C:\xampp\htdocs\jobRing_end\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\jobRing_end\app\Models" />
-      <recent name="C:\xampp\htdocs\jobRing_end" />
-      <recent name="C:\xampp\htdocs\JobRing_Ah-master\resources\views" />
+      <recent name="C:\laragon\www\job\app\Models" />
+      <recent name="C:\laragon\www\job\resources\views\site" />
+      <recent name="C:\laragon\www\job\app\Http\Controllers\Admin" />
+      <recent name="C:\laragon\www\job\resources\views" />
+      <recent name="C:\laragon\www\job\resources\views\admin\includes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\job\public\images" />
@@ -266,7 +280,7 @@
       <workItem from="1681127443056" duration="2180000" />
       <workItem from="1681563188118" duration="13000" />
       <workItem from="1683577576913" duration="1543000" />
-      <workItem from="1685101734146" duration="4539000" />
+      <workItem from="1685101734146" duration="20622000" />
     </task>
     <servers />
   </component>
@@ -294,6 +308,11 @@
           <url>file://$PROJECT_DIR$/resources/views/site/forget.blade.php</url>
           <line>44</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/job/add_Job.blade.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

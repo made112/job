@@ -66,10 +66,11 @@
                     </div>
                 </div>
 
-                <div class="col-md-7 col-sm-10">
+                <div class="col-md-12 col-sm-10">
                     <!-- CONTACT FORM HERE -->
                     <div class="wow fadeInUp" data-wow-delay="0.4s">
-                        <form id="contact-form" action="#" method="post">
+                        <form  id="contact-form" action="{{route('company.suggest')}}" method="post">
+                            @csrf
                             <div class="col-md-6 col-sm-6">
                                 <input type="text" class="form-control" name="name" placeholder="Name" required="">
                             </div>
@@ -80,25 +81,13 @@
                                 <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
                             </div>
                             <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                                <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+                                <button id="submit" type="submit" class="form-control" name="submit">Suggest</button>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div class="col-md-5 col-sm-8">
-                    <!-- CONTACT INFO -->
-                    <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
-                        <div class="section-title">
-                            <h2>Contact Info</h2>
-                            <p>It's easy to contact us! You can just add your name, email and message for any support, billing, business development, or sales questions.</p>
-                        </div>
 
-                        <p><i class="fa fa-map-marker"></i>Street 22000, Gaza City, Palestine</p>
-                        <p><i class="fa fa-comment"></i> <a href="mailto:info@company.com">info@company.com</a></p>
-
-                    </div>
-                </div>
 
             </div>
         </div>

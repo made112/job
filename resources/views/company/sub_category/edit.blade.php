@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>JOBS</h1>
+                        <h1>SubCategory</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Edit JOBS</li>
+                            <li class="breadcrumb-item active">Edit SubCategory</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 @include('admin.includes.alerts.errors')
 
                 <form method="post" name="sectionForm" id="sectionForm"
-                      action="{{route('admin.company.update',$Jobs->id)}}">
+                      action="{{route('admin.sub_category.update',$Sub_Category->id)}}">
                     @csrf
                     <div class="card card-default">
                         <div class="card-header">
@@ -36,41 +36,33 @@
                                 <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
                             </div>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="type">Job Name</label>
-                                        <input name="name" type="text" class="form-control" value= {{$Jobs->name}} id="name" placeholder="">
+                                        <label for="type">SUB_Category Name</label>
+                                        <input name="name"  value="{{$Sub_Category->name}}" type="text" class="form-control" >
 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="type">Job description</label>
-                                        <input name="description" type="text" class="form-control" value= {{$Jobs->description}} id="description" placeholder="">
+                        <br>                         <br>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="switch">
-                                            <input type="checkbox" name="active" value="1"@if($Jobs -> active  == 1 ) checked @endif>
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <label for="projectinput2"> choose category </label>
+
+                        <select name="category_id" class=" form-control">
+                            <optgroup >
+                                @if($category-> count() > 0)
+                                    @foreach($category as $cat)
+                                        <option
+                                            value="{{$cat-> category-> id }}"
+                                        >{{$cat->category->  name}}</option>
+                                    @endforeach
+                                @endif
+                            </optgroup>
+                        </select>
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
@@ -79,5 +71,4 @@
             </div>
         </section>
         <!-- /.content -->
-    </div>
 @endsection

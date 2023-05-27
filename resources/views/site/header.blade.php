@@ -51,7 +51,7 @@
                         <a class="nav-link" href="{{route('site.about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('site.contact-us')}}">Contact Us</a>
+                        <a class="nav-link" href="{{route('site.contact-us')}}">Company</a>
                     </li>
 
                     @auth()

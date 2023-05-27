@@ -31,10 +31,10 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Jop Type</th>
-                        <th>Salary</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Field Work</th>
 {{--                        <th>Date Posted</th>--}}
                         <th>Action</th>
 
@@ -45,12 +45,12 @@
 
                         <tr>
                             <td>{{$job->name}}</td>
-                            <td>{{$job->job_description}}</td>
-                            <td>{{$job->job_type}}</td>
-                            <td>{{$job->salary}}</td>
+                            <td>{{$job->email}}</td>
+                            <td>{{$job->addres}}</td>
+                            <td>{{$job->field_work}}</td>
 {{--                            <td>{{$company->date_posted}}</td>--}}
                             <td>
-                                <a href="{{route('admin.job.delete',$job->id)}}"> <button class = "btn-danger" id="myBtn">delete</button></a>
+                                <a href="{{route('admin.company.delete',$job->id)}}"> <button class = "btn-danger" id="myBtn">delete</button></a>
                             </td>
 
 

@@ -82,8 +82,6 @@
                                             <th>Description</th>
                                             <th>Jop Type</th>
                                             <th>Salary</th>
-                                            <th>Company</th>
-
                                             <th>Date Posted</th>
                                             <th>Action</th>
 
@@ -95,10 +93,8 @@
                                             <tr>
                                                 <td>{{$job->name}}</td>
                                                 <td>{{$job->job_description}}</td>
-                                                <td>{{$job->jobtype?$job->jobtype->name:''}}</td>
+                                                <td>{{$job->job_type}}</td>
                                                 <td>{{$job->salary}}</td>
-                                                <td>{{$job->company?$job->company->name:''}}</td>
-
                                                 <td>{{$job->created_at}}</td>
                                                 @auth()
                                                     <td><button class = "btn-primary" id="myBtn">Apply</button>
@@ -260,7 +256,7 @@
                             @foreach($job_type as $item)
 
                                 <label class="custom-control custom-checkbox">
-                                    <input value="{{$item->id}}"  name="job_type" type="checkbox" class="custom-control-input">
+                                    <input checked value="{{$item->id}}"  name="job_type" type="checkbox" class="custom-control-input">
                                     <div class="custom-control-label">{{$item->name}}
                                     </div>
                                 </label>

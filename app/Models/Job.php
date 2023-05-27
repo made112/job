@@ -9,10 +9,13 @@ class Job extends Model
     protected $guarded = [];
 
     protected  $table = 'job';
-    public $timestamps = false ;
+    public $timestamps = true ;
 
-    public  function JobType(){
-        return $this -> hasOne(JobType::class,'job_type');
+    public  function company(){
+        return $this ->belongsTo(Company::class,'company_id');
+    }
+    public  function jobtype(){
+        return $this ->belongsTo(JobType::class,'job_type');
     }
 //
 //    public function scopeSelection($query)

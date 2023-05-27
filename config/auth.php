@@ -54,6 +54,10 @@ return [
             'driver' => 'token',
             'provider' => 'students',
         ],
+        'company' => [
+            'driver' => 'token',
+            'provider' => 'company',
+        ],
     ],
 
     /*
@@ -83,6 +87,10 @@ return [
             'model' => App\User::class,
         ],
         'student' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
+        'company' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],

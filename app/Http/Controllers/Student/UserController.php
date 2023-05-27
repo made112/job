@@ -38,7 +38,7 @@ class UserController extends Controller
                 $user->save();
                 if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 //                    Session::put('frontSession',$data['email']);
-                    return redirect()->route('job.browse');
+                    return redirect()->route('company.browse');
 
                 }
             }
@@ -52,7 +52,7 @@ class UserController extends Controller
         if ($request->isMethod('post')) {
             $data = $request->all();
             if (Auth::attempt(['email' => $data['email'], 'password' => $data['password']])) {
-                return redirect()->route('job.browse');
+                return redirect()->route('company.browse');
             } else {
                 return redirect()->back();
             }

@@ -43,13 +43,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="{{asset('img/job-ring.png')}}" /></svg>
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="{{asset('img/company-ring.png')}}" /></svg>
 
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Jobber</h1>
                         <p><i>Jobber</i> is a recruitment platform, it aims to connect students and graduates to the careers they seek and in turn help corporates and organizations fill gaps in the talent and skills they need.</p>
-                        <p><a class="btn btn-lg btn-primary" href="{{route('job.register')}}" role="button">Sign up now!</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="{{route('company.register')}}" role="button">Sign up now!</a></p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="carousel-caption">
                         <h1>Explore Jobber .</h1>
                         <p><i>Jobber</i> offers the chance to explore companies and look for internships or different job opportunities. </p>
-                        <p><a class="btn btn-lg btn-primary" href="{{route('job.browse')}}" role="button">BrowseJobber !</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="{{route('company.browse')}}" role="button">BrowseJobber !</a></p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="carousel-caption text-end">
                         <h1>Hunt the right talent.</h1>
                         <p><i>Jobber</i> offers the possibility to reach out to students and graduates, explore all available skills and hunt the right talent.</p>
-                        <p><a class="btn btn-lg btn-primary" href="{{route('job.register')}}" role="button">Hunt for talent!</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="{{route('company.register')}}" role="button">Hunt for talent!</a></p>
                     </div>
                 </div>
             </div>

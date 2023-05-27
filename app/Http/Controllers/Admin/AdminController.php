@@ -23,9 +23,19 @@ class AdminController extends Controller
 
         if (auth()->guard('admin')->attempt(['email' => $request->input("email"),
          'password' => $request->input("password")])) {
-             return redirect()->route('admin.dashboard');
-         }
-         return redirect()->back()->with(['error'=>'المعلومات خاطئة']);
+            return redirect()->route('admin.dashboard');
+
+        }
+        if (auth()->user()->type=='company' &&  auth()->attempt(['email' => $request->input("email"),
+                'password' => $request->input("password")])){
+
+
+         return redirect()->route('company.dashboard');
+
+        }else{
+            return redirect()->back()->with(['error'=>'المعلومات خاطئة']);
+
+        }
     }
 
     public function index(){

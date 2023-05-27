@@ -185,7 +185,7 @@
                                         <h6 class="mb-0">Company Name</h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-
+                                        {{$company->name}}
                                     </div>
                                 </div>
                                 <hr>
@@ -279,7 +279,7 @@
                                                         <li class="skills-job">CSS</li>
                                                     </ul>
                                                 </div>
-{{--                                                <p style="padding-top: 10px;"><strong><a href="job-detail.html">Click here to more detail...</a></strong></p>--}}
+{{--                                                <p style="padding-top: 10px;"><strong><a href="company-detail.html">Click here to more detail...</a></strong></p>--}}
                                             </div>
                                             <div class="views">
                                                 <img width="15px" height="15px" src="https://cdn.onlinewebfonts.com/svg/img_56374.png">

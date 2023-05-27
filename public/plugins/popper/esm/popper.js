@@ -211,7 +211,7 @@ function getOffsetParent(element) {
   }
 
   // .offsetParent will return the closest TH, TD or TABLE in case
-  // no offsetParent is present, I hate this job...
+  // no offsetParent is present, I hate this company...
   if (['TH', 'TD', 'TABLE'].indexOf(offsetParent.nodeName) !== -1 && getStyleComputedProperty(offsetParent, 'position') === 'static') {
     return getOffsetParent(offsetParent);
   }

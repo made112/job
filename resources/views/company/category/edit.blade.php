@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>JOBS</h1>
+                        <h1>Category</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Edit JOBS</li>
+                            <li class="breadcrumb-item active">Edit Category</li>
                         </ol>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 @include('admin.includes.alerts.errors')
 
                 <form method="post" name="sectionForm" id="sectionForm"
-                      action="{{route('admin.company.update',$Jobs->id)}}">
+                      action="{{route('admin.category.update',$Category->id)}}">
                     @csrf
                     <div class="card card-default">
                         <div class="card-header">
@@ -41,19 +41,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="type">Job Name</label>
-                                        <input name="name" type="text" class="form-control" value= {{$Jobs->name}} id="name" placeholder="">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="type">Job description</label>
-                                        <input name="description" type="text" class="form-control" value= {{$Jobs->description}} id="description" placeholder="">
+                                        <label for="type">Category Name</label>
+                                        <input name="name" type="text" class="form-control" value= {{$Category->name}} id="name" placeholder="">
 
                                     </div>
                                 </div>
@@ -64,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="switch">
-                                            <input type="checkbox" name="active" value="1"@if($Jobs -> active  == 1 ) checked @endif>
+                                            <input type="checkbox" name="active" value="1"@if($Category -> active  == 1 ) checked @endif>
                                             <span class="slider round"></span>
                                         </label>
                                     </div>

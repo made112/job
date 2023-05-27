@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //define('PAGINATION_COUNT',10);
+
 Route::group(['namespace'=>'Admin','middleware'=>'guest:admin'],function(){
     Route::get('/login','AdminController@getlogin')->name('get.admin.login');
     Route::post('/login','AdminController@postlogin')->name('admin.login');
@@ -61,9 +62,28 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth:admin'],function(){
         Route::post('update/{id}','JobController@update') -> name('admin.job.update');
         Route::get('edit/{id}','JobController@edit') ->name('admin.job.edit');
         Route::get('delete/{id}','JobController@destroy') -> name('admin.job.delete');
-        Route::get('/job/request','JobController@indexRquest') -> name('admin.job_request');
-        Route::get('/job/delete/{id}','JobController@deleteRquest') -> name('admin.job_request.delete');
-        Route::get('download-file', 'JobController@downloadFile')->name('job.download');
+        Route::get('/company/request','JobController@indexRquest') -> name('admin.job_request');
+        Route::get('/company/delete/{id}','JobController@deleteRquest') -> name('admin.job_request.delete');
+        Route::get('download-file', 'JobController@downloadFile')->name('company.download');
+
+
+
+
+    });
+
+    Route::group(['prefix' => 'company'], function () {
+        Route::get('/','CompanyController@index') -> name('company.index');
+        Route::get('create', 'CompanyController@create')->name('company.create');
+        Route::post('store/jop', 'CompanyController@store')->name('company.post');
+
+        Route::post('update/{id}','CompanyController@update') -> name('admin.company.update');
+        Route::get('edit/{id}','CompanyController@edit') ->name('admin.company.edit');
+        Route::get('delete/{id}','CompanyController@destroy') -> name('admin.company.delete');
+        Route::get('/company/request','CompanyController@indexRquest') -> name('admin.company_request');
+        Route::get('/company/delete/{id}','CompanyController@deleteRquest') -> name('company_request.delete');
+//        Route::get('download-file', 'JobController@downloadFile')->name('company.download');
+        Route::post('suggest/company', '
+        @suggest')->name('company.suggest');
 
 
 

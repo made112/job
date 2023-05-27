@@ -124,7 +124,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `job`
+-- Table structure for table `company`
 --
 
 CREATE TABLE `job` (
@@ -137,7 +137,7 @@ CREATE TABLE `job` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `job`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `job` (`id`, `name`, `active`, `description`, `created_at`, `updated_at`) VALUES
@@ -260,7 +260,7 @@ ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `job`
+-- Indexes for table `company`
 --
 ALTER TABLE `job`
   ADD PRIMARY KEY (`id`);
@@ -319,7 +319,7 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `job`
+-- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `job`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;

@@ -7,48 +7,64 @@ use App\Models\Company;
 use App\Models\Job;
 use App\Models\JobType;
 use App\Models\Request_job;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\JobRequest ;
 
-class JobController extends Controller
+class CompanyController extends Controller
 {
     public function create()
     {
+//        dd('ss');
         $jop = JobType::get();
-        $company = Company::get();
 
-        return view('admin.job.add_Job',compact('jop','company'));
+        return view('company.company.create',compact('jop'));
     }
 
     public function store(Request $request)
     {
-//            dd($requestst);
-        if($request->file('video')){
-            $path = $request->file('video')->store('/imagesite', ['disk' => 'uploads']);
-            Job::create($request->except(['_token','video'=>$path]));
-
-        }else{
-            Job::create($request->except(['_token']));
-
-        }
+//            dd($request);
 
 //        try {
 
+            Company::create($request->all());
 
-            return redirect()->route('jop')->with(['success' => 'تم الحفظ بنجاح']);
+
+            return redirect()->route('company.index')->with(['success' => 'تم الحفظ بنجاح']);
 
 //        } catch (\Exception $ex) {
 
 //        }
-        return redirect()->route('jop')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+
+
+    }
+
+
+    public function suggest(Request $request)
+    {
+            dd($request);
+
+//        try {
+        $user = new User();
+
+        $user->
+        Company::create($request->except(['_token','video',$path]));
+
+
+        return redirect()->route('jop')->with(['success' => 'تم الحفظ بنجاح']);
+
+//        } catch (\Exception $ex) {
+
+//        }
+        return redirect()->route('company.index')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
 
 
     }
 
     public function index()
     {
-        $jobs = Job::paginate(6);
-        return view('admin.job.index', compact('jobs'));
+        $jobs = Company::where('active',1)->paginate(6);
+        return view('company.company.index', compact('jobs'));
 
 
     }
@@ -62,12 +78,12 @@ class JobController extends Controller
     }
     public function edit($id)
     {
-        $Jobs = Job::find($id);
+        $Jobs = Company::find($id);
 
         if (!$Jobs)
-            return redirect()->route('admin.job')->with(['error' => 'هذا القسم غير موجود ']);
+            return redirect()->route('company.index')->with(['error' => 'هذا القسم غير موجود ']);
 
-        return view('admin.job.edit', compact('Jobs'));
+        return view('company.edit', compact('Jobs'));
 
     }
     public function update($id, JobRequest $request)
@@ -76,7 +92,7 @@ class JobController extends Controller
         try {
             $Jobs = Job::find($id);
             if (!$Jobs) {
-                return redirect()->route('admin.job', $id)->with(['error' => 'هذه الزظيفة غير موجوده']);
+                return redirect()->route('admin.company', $id)->with(['error' => 'هذه الزظيفة غير موجوده']);
             }
             if (!$request->has('active'))
                 $request->request->add(['active' => 0]);
@@ -86,21 +102,21 @@ class JobController extends Controller
             return redirect()->route('jop')->with(['success' => 'تم تحديث الوظيفة بنجاح']);
 
         } catch (\Exception $ex) {
-            return redirect()->route('admin.job')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
+            return redirect()->route('admin.company')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
     }
     public function destroy($id){
         try {
-            $Jobs = Job::find($id);
+            $Jobs = Company::find($id);
             if (!$Jobs) {
-                return redirect()->route('admin.job', $id)->with(['error' => 'هذه الوظيفة غير موجوده']);
+                return redirect()->route('company.index', $id)->with(['error' => 'هذه الشركة غير موجوده']);
             }
             $Jobs->delete();
 
-            return redirect()->route('admin.job')->with(['error' => 'تم حذف الوظيفة بنجاح']);
+            return redirect()->route('company.index')->with(['error' => 'تم حذف الوظيفة بنجاح']);
 
         } catch (\Exception $ex) {
-            return redirect()->route('admin.job')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
+            return redirect()->route('company.index')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
     }
     public function deleteRquest($id){
@@ -114,7 +130,7 @@ class JobController extends Controller
             return redirect()->route('admin.job_request')->with(['error' => 'تم حذف الوظيفة بنجاح']);
 
 //        } catch (\Exception $ex) {
-            return redirect()->route('admin.job')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
+            return redirect()->route('admin.company')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
 //        }
     }
 
